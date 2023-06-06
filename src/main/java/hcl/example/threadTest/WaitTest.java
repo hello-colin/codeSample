@@ -30,7 +30,7 @@ public class WaitTest {
 //        }
 
         synchronized (lock) {
-            System.out.println("主线程唤醒所有");
+            System.out.println(Thread.currentThread().getName()+"主线程唤醒所有");
             lock.notifyAll();
         }
         System.out.println("运行结束");
