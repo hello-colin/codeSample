@@ -10,7 +10,7 @@ public class AdvancedProducerConsumer {
     private final ExecutorService producerExecutor = Executors.newFixedThreadPool(2);
     private final ExecutorService consumerExecutor = Executors.newFixedThreadPool(2);
 
-    public void produce(int item) {
+    public void produce(int  item) {
         producerExecutor.submit(() -> {
             try {
                 queue.put(item);
