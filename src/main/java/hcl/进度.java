@@ -36,7 +36,7 @@ public class 进度 {
                 "                   **************************                 \n\r" +
                 "                     **********************                   \n\r" +
                 "                        ****************                      \n\r" +
-                "                             ******                           \n\r";
+                "                             ******                           ";
 
         String s2=
                 "                      *******      *******                    \n\r" +
@@ -45,15 +45,15 @@ public class 进度 {
                 "                   **************************                 \n\r" +
                 "                     **********************                   \n\r" +
                 "                        ****************                      \n\r" +
-                "                             ******                           \n\r";
+                "                             ******                           ";
         System.out.println("\033[47;31m\033[5m");
         for(int i=0;i<100;i++){
             System.out.print(s1);
             Thread.sleep(1000);
-            System.out.print("\033[H\033[2J");
+            System.out.print("\033[H\033[2J"); // 某些终端支持此ANSI转义序列来清屏
             System.out.print(s2);
-            Thread.sleep(1000);
-            System.out.print("\033[H\033[2J");
+            System.out.print("\033[H\033[2J"); // 某些终端支持此ANSI转义序列来清屏
+            System.out.print("\t");
         }
 
     }

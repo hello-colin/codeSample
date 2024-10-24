@@ -24,6 +24,8 @@ public class MyThreadPoll {
 
 
 
+
+
         //线程数量太多了，容易OOM
         //可缓存线程池
         ExecutorService cachedExecutorService=Executors.newCachedThreadPool();
@@ -51,8 +53,6 @@ public class MyThreadPoll {
                 (Runtime.getRuntime().availableProcessors(),
                         ForkJoinPool.defaultForkJoinWorkerThreadFactory,
                         null, true);
-
-
 
 
         ExecutorService executorService1=new ThreadPoolExecutor(3,10,1000,
